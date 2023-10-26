@@ -1,0 +1,58 @@
+@import '@styles/bundle';
+
+.post {
+    display                : flex;
+    flex-direction         : column;
+    margin-bottom          : rem-calc(27);
+    border-top-right-radius: 2px;
+    border-top-left-radius : 2px;
+    border-top             : 3px solid $color-mid-dark;
+    box-shadow             : 0 1px 1px 0 rgba($color-x-dark, .15), 0 2px 2px -1px rgba($color-x-dark, .15), 0 0 3px 0 rgba($color-x-dark, .2);
+
+    &--canonical-announcements {
+        border-top-color: $color-orange;
+    }
+
+    &__header {
+        padding: rem-calc(16 18 9);
+
+        @include breakpoint(large up) {
+            padding   : rem-calc(18 18 9);
+            min-height: rem-calc(54);
+        }
+    }
+
+    &__inner {
+        padding      : rem-calc(18 9 9);
+        margin       : rem-calc(0 9);
+        border-top   : 1px dotted $color-mid-light;
+        border-bottom: 1px dotted $color-mid-light;
+        height       : 100%;
+    }
+
+    &__image {
+        display    : block;
+        width      : 100%;
+        padding-top: 56.25%;
+        position   : relative;
+
+        img {
+            position  : absolute;
+            top       : 0;
+            left      : 0;
+            width     : 100%;
+            height    : 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin-top: rem-calc(9);
+    }
+
+    &__footer {
+        padding      : rem-calc(18 18 19);
+        line-height  : rem-calc(27);
+        margin-bottom: 0;
+    }
+}

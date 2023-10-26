@@ -1,0 +1,14 @@
+@import '@styles/bundle';
+
+.header {
+    text-align      : center;
+    padding-top     : rem-calc(60);
+    padding-bottom  : rem-calc(32);
+    margin-bottom   : rem-calc(27);
+    background-color: $color-light;
+
+    @include breakpoint(large) {
+        padding-top   : rem-calc(120);
+        padding-bottom: rem-calc(64);
+    }
+}
